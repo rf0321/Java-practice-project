@@ -4,6 +4,16 @@ import java.util.stream.Stream;
 
 public class Main{
   public static void main(String[]args) {
+      Map<Integer,String>map=new HashMap();
+      map.put(1,"HogeMan");
+      map.put(2,"FooMan");
+      map.put(3,"BarMan");
+          
+      System.out.println(map);
+    
+      Stream<Entry<Integer,String>>stream=map.entrySet().stream();
+      stream.forEach(e-> System.out.println(e.getKey()+":"+e.getValue()));
+    
       List<Students> studentsList = new ArrayList<>();
       studentsList.add(new Students("かたいなかまま", -3));
       studentsList.add(new Students("白沢ノエル",45));
